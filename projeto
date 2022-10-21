@@ -1,2 +1,15 @@
 var 
-cid,telefone,end,cep,numero
+op:inteiro
+inicio
+escreva("pizza de muçarela ----- $28,00")
+leia(op)
+escreva("pizza calabresa ----- $26,00")
+leia(op)
+escreva ("pizza de frango com catupiry ----- $35,00")
+leia(op)
+escreva ("pizza marguerida ----- $37,00")
+leia(op)
+escreva ("pizza portuguesa ----- $38,00")
+leia(op)
+escreva ("pizza de brócolis ----- $24,00")
+leia(op)
