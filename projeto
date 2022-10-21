@@ -1,7 +1,37 @@
-var 
+Algoritmo  "PIZZARIA SANNY"
+Var
+nomes: vetor[0..3] de caractere
+telefone: vetor[0..3] de inteiro
+opt, nome: caractere
+i, j, s: inteiro
 op:inteiro
-inicio
-escreva("pizza de muçarela ----- $28,00")
+endereco:caracter
+procedimento principal()
+
+Inicio
+
+ENQUANTO opt <> "3" faca
+ escreval("------------------------------------------")
+ escreval("-------------------MENU-------------------")
+ escreval("------------------------------------------")
+ escreval("")
+ escreval(" (1) Cadastrar Novo Usuário")
+ escreval(" (2) Cardapio")
+ escreval(" (3) Sair do Sistema")
+ escreval("")
+ escreva("Digite a opção: ")
+ leia (opt)
+ se opt="1" entao
+   limpatela
+   se s=10 entao
+   escreval("Esgotado o limite de cadastros")
+   escreval()
+   senao
+   cadastro_usuario()
+   fimse
+   fimse
+ se opt="2" entao
+ escreva("pizza de muçarela ----- $28,00")
 leia(op)
 escreva("pizza calabresa ----- $26,00")
 leia(op)
@@ -13,3 +43,56 @@ escreva ("pizza portuguesa ----- $38,00")
 leia(op)
 escreva ("pizza de brócolis ----- $24,00")
 leia(op)
+   limpatela
+    fimse
+ se opt="3" entao
+   para i de 0 ate 3 faca
+    nomes[i]<-"xpto"
+    fimpara
+    limpatela
+    escreval("Aplicação Encerrada, Volte Sempre.")
+   fimse
+fimenquanto
+fimprocedimento
+
+procedimento cadastro_usuario()
+inicio
+ para i de 0 ate 3 faca
+  se(nomes[i]="") entao
+   escreva("Nome: ")
+   leia(nomes[i])
+   escreva("Telefone: ")
+   leia(telefone[i])
+   escreva("Endereço: ")
+   leia(endereco[i])
+   escreval()
+   escreva("Cadastro feito com sucesso!")
+   escreval()
+   retorna_menu()
+   s <- s+1
+   limpatela
+   fimse
+  fimpara
+ escreval("Esgotado o limite de cadastros")
+ escreval()
+fimprocedimento
+
+procedimento retorna_menu()
+inicio
+escreval("Deseja Retornar ao Menu")
+escreval("S = SIM | N = NÃO")
+leia (opt)
+ se opt = "S" entao
+  i <- i+1
+  limpatela
+  principal()
+  senao
+  limpatela
+  cadastro_usuario()
+  fimse
+fimprocedimento
+
+inicio
+  principal()
+
+Fimalgoritmo
